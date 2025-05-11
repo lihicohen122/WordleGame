@@ -1,0 +1,2 @@
+C:\Users\Omri\Desktop\degree\last year\C#\HW2\Ex02 LihiCohen 314958042 OmriLevy 208008649\Ex02 Lihi 314958042 Omri 208008649\Ex02_Logic\obj\Debug\Ex02_Logic.csproj.AssemblyReference.cache
+C:\Users\Omri\Desktop\degree\last year\C#\HW2\Ex02 LihiCohen 314958042 OmriLevy 208008649\Ex02 Lihi 314958042 Omri 208008649\Ex02_Logic\obj\Debug\Ex02_Logic.csproj.CoreCompileInputs.cache
