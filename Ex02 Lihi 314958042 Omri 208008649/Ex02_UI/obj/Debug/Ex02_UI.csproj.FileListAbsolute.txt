@@ -1,0 +1,3 @@
+C:\Users\רויטל כהן\Desktop\שנה ג\c# homework\WordleGame\Ex02 Lihi 314958042 Omri 208008649\Ex02_UI\obj\Debug\Ex02_UI.csproj.AssemblyReference.cache
+C:\Users\רויטל כהן\Desktop\שנה ג\c# homework\WordleGame\Ex02 Lihi 314958042 Omri 208008649\Ex02_UI\obj\Debug\Ex02_UI.csproj.SuggestedBindingRedirects.cache
+C:\Users\רויטל כהן\Desktop\שנה ג\c# homework\WordleGame\Ex02 Lihi 314958042 Omri 208008649\Ex02_UI\obj\Debug\Ex02_UI.csproj.CoreCompileInputs.cache

@@ -11,7 +11,6 @@ namespace Ex02_UI
         public static void Main()
         {
             new GameInterface ();
-            private 
         }
     }
 }
