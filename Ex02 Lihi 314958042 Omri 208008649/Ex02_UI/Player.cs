@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ex02_Logic
+namespace Ex02_UI
 {
     internal class Player
     {

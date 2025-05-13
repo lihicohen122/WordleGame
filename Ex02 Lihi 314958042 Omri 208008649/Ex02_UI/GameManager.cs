@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-namespace Ex02_Logic
+namespace Ex02_UI
 {
   
     public class GameManager
@@ -30,6 +30,10 @@ namespace Ex02_Logic
             return m_Result;
         }
 
+        public int getUserChosenNumberOfGuesses()
+        {
+            return m_PPlayer.MTotalGuessesChosen;
+        }
         private string randomizeWord() //static
         {
             char[] iPossibleLetters = {'A', 'B', 'C', 'D', 'E','F','G','H'};
@@ -129,11 +133,13 @@ namespace Ex02_Logic
         {
             //might want to change both returns to use a flag.
             //then we would have a single return.
-            
-            bool isGuessMatch=true;
-            for(int i = 0; i < k_SizeOfGeneratedWordToGuess; i++)
+
+            bool isGuessMatch = m_Result != null;
+
+
+            for (int i = 0; i < k_SizeOfGeneratedWordToGuess; i++)
             {
-                if(m_Result[i] != 'V')
+                if(m_Result!=null && m_Result[i] != 'V')
                 {
                     isGuessMatch = false;
                     break;

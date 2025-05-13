@@ -1,26 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Omri\\Desktop\\degree\\last year\\C#\\HW2\\Ex02 LihiCohen 314958042 OmriLevy 208008649\\Ex02 Lihi 314958042 Omri 208008649\\",
+  "WorkspaceRootPath": "C:\\Users\\Omri\\Desktop\\degree\\last year\\C#\\HW2\\clone 5.12\\WordleGame\\Ex02 Lihi 314958042 Omri 208008649\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C2E726D9-4A10-4746-971D-356D843CB27F}|Ex02_UI\\Ex02_UI.csproj|c:\\users\\omri\\desktop\\degree\\last year\\c#\\hw2\\ex02 lihicohen 314958042 omrilevy 208008649\\ex02 lihi 314958042 omri 208008649\\ex02_ui\\gameinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C2E726D9-4A10-4746-971D-356D843CB27F}|Ex02_UI\\Ex02_UI.csproj|c:\\users\\omri\\desktop\\degree\\last year\\c#\\hw2\\clone 5.12\\wordlegame\\ex02 lihi 314958042 omri 208008649\\ex02_ui\\gameinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C2E726D9-4A10-4746-971D-356D843CB27F}|Ex02_UI\\Ex02_UI.csproj|solutionrelative:ex02_ui\\gameinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2E726D9-4A10-4746-971D-356D843CB27F}|Ex02_UI\\Ex02_UI.csproj|c:\\users\\omri\\desktop\\degree\\last year\\c#\\hw2\\ex02 lihicohen 314958042 omrilevy 208008649\\ex02 lihi 314958042 omri 208008649\\ex02_ui\\inputvalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C2E726D9-4A10-4746-971D-356D843CB27F}|Ex02_UI\\Ex02_UI.csproj|c:\\users\\omri\\desktop\\degree\\last year\\c#\\hw2\\clone 5.12\\wordlegame\\ex02 lihi 314958042 omri 208008649\\ex02_ui\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2E726D9-4A10-4746-971D-356D843CB27F}|Ex02_UI\\Ex02_UI.csproj|solutionrelative:ex02_ui\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2E726D9-4A10-4746-971D-356D843CB27F}|Ex02_UI\\Ex02_UI.csproj|c:\\users\\omri\\desktop\\degree\\last year\\c#\\hw2\\clone 5.12\\wordlegame\\ex02 lihi 314958042 omri 208008649\\ex02_ui\\inputvalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C2E726D9-4A10-4746-971D-356D843CB27F}|Ex02_UI\\Ex02_UI.csproj|solutionrelative:ex02_ui\\inputvalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BFEFF22-163C-462D-A128-14631A5115A0}|Ex02_Logic\\Ex02_Logic.csproj|c:\\users\\omri\\desktop\\degree\\last year\\c#\\hw2\\ex02 lihicohen 314958042 omrilevy 208008649\\ex02 lihi 314958042 omri 208008649\\ex02_logic\\boardlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BFEFF22-163C-462D-A128-14631A5115A0}|Ex02_Logic\\Ex02_Logic.csproj|solutionrelative:ex02_logic\\boardlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C2E726D9-4A10-4746-971D-356D843CB27F}|Ex02_UI\\Ex02_UI.csproj|c:\\users\\omri\\desktop\\degree\\last year\\c#\\hw2\\clone 5.12\\wordlegame\\ex02 lihi 314958042 omri 208008649\\ex02_ui\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2E726D9-4A10-4746-971D-356D843CB27F}|Ex02_UI\\Ex02_UI.csproj|solutionrelative:ex02_ui\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2E726D9-4A10-4746-971D-356D843CB27F}|Ex02_UI\\Ex02_UI.csproj|c:\\users\\omri\\desktop\\degree\\last year\\c#\\hw2\\ex02 lihicohen 314958042 omrilevy 208008649\\ex02 lihi 314958042 omri 208008649\\ex02_ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C2E726D9-4A10-4746-971D-356D843CB27F}|Ex02_UI\\Ex02_UI.csproj|c:\\users\\omri\\desktop\\degree\\last year\\c#\\hw2\\clone 5.12\\wordlegame\\ex02 lihi 314958042 omri 208008649\\ex02_ui\\board.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2E726D9-4A10-4746-971D-356D843CB27F}|Ex02_UI\\Ex02_UI.csproj|solutionrelative:ex02_ui\\board.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2E726D9-4A10-4746-971D-356D843CB27F}|Ex02_UI\\Ex02_UI.csproj|c:\\users\\omri\\desktop\\degree\\last year\\c#\\hw2\\clone 5.12\\wordlegame\\ex02 lihi 314958042 omri 208008649\\ex02_ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C2E726D9-4A10-4746-971D-356D843CB27F}|Ex02_UI\\Ex02_UI.csproj|solutionrelative:ex02_ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BFEFF22-163C-462D-A128-14631A5115A0}|Ex02_Logic\\Ex02_Logic.csproj|c:\\users\\omri\\desktop\\degree\\last year\\c#\\hw2\\ex02 lihicohen 314958042 omrilevy 208008649\\ex02 lihi 314958042 omri 208008649\\ex02_logic\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BFEFF22-163C-462D-A128-14631A5115A0}|Ex02_Logic\\Ex02_Logic.csproj|solutionrelative:ex02_logic\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,71 +34,84 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "InputValidation.cs",
-              "DocumentMoniker": "C:\\Users\\Omri\\Desktop\\degree\\last year\\C#\\HW2\\Ex02 LihiCohen 314958042 OmriLevy 208008649\\Ex02 Lihi 314958042 Omri 208008649\\Ex02_UI\\InputValidation.cs",
-              "RelativeDocumentMoniker": "Ex02_UI\\InputValidation.cs",
-              "ToolTip": "C:\\Users\\Omri\\Desktop\\degree\\last year\\C#\\HW2\\Ex02 LihiCohen 314958042 OmriLevy 208008649\\Ex02 Lihi 314958042 Omri 208008649\\Ex02_UI\\InputValidation.cs",
-              "RelativeToolTip": "Ex02_UI\\InputValidation.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Users\\Omri\\Desktop\\degree\\last year\\C#\\HW2\\clone 5.12\\WordleGame\\Ex02 Lihi 314958042 Omri 208008649\\Ex02_UI\\Player.cs",
+              "RelativeDocumentMoniker": "Ex02_UI\\Player.cs",
+              "ToolTip": "C:\\Users\\Omri\\Desktop\\degree\\last year\\C#\\HW2\\clone 5.12\\WordleGame\\Ex02 Lihi 314958042 Omri 208008649\\Ex02_UI\\Player.cs",
+              "RelativeToolTip": "Ex02_UI\\Player.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-11T16:55:28.749Z",
+              "WhenOpened": "2025-05-13T10:58:14.695Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\Users\\Omri\\Desktop\\degree\\last year\\C#\\HW2\\clone 5.12\\WordleGame\\Ex02 Lihi 314958042 Omri 208008649\\Ex02_UI\\GameManager.cs",
+              "RelativeDocumentMoniker": "Ex02_UI\\GameManager.cs",
+              "ToolTip": "C:\\Users\\Omri\\Desktop\\degree\\last year\\C#\\HW2\\clone 5.12\\WordleGame\\Ex02 Lihi 314958042 Omri 208008649\\Ex02_UI\\GameManager.cs",
+              "RelativeToolTip": "Ex02_UI\\GameManager.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwCAAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T10:57:40.414Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "InputValidation.cs",
+              "DocumentMoniker": "C:\\Users\\Omri\\Desktop\\degree\\last year\\C#\\HW2\\clone 5.12\\WordleGame\\Ex02 Lihi 314958042 Omri 208008649\\Ex02_UI\\InputValidation.cs",
+              "RelativeDocumentMoniker": "Ex02_UI\\InputValidation.cs",
+              "ToolTip": "C:\\Users\\Omri\\Desktop\\degree\\last year\\C#\\HW2\\clone 5.12\\WordleGame\\Ex02 Lihi 314958042 Omri 208008649\\Ex02_UI\\InputValidation.cs",
+              "RelativeToolTip": "Ex02_UI\\InputValidation.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAAwAoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T09:00:57.796Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Board.cs",
+              "DocumentMoniker": "C:\\Users\\Omri\\Desktop\\degree\\last year\\C#\\HW2\\clone 5.12\\WordleGame\\Ex02 Lihi 314958042 Omri 208008649\\Ex02_UI\\Board.cs",
+              "RelativeDocumentMoniker": "Ex02_UI\\Board.cs",
+              "ToolTip": "C:\\Users\\Omri\\Desktop\\degree\\last year\\C#\\HW2\\clone 5.12\\WordleGame\\Ex02 Lihi 314958042 Omri 208008649\\Ex02_UI\\Board.cs",
+              "RelativeToolTip": "Ex02_UI\\Board.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABkAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T07:44:13.227Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Omri\\Desktop\\degree\\last year\\C#\\HW2\\clone 5.12\\WordleGame\\Ex02 Lihi 314958042 Omri 208008649\\Ex02_UI\\Program.cs",
+              "RelativeDocumentMoniker": "Ex02_UI\\Program.cs",
+              "ToolTip": "C:\\Users\\Omri\\Desktop\\degree\\last year\\C#\\HW2\\clone 5.12\\WordleGame\\Ex02 Lihi 314958042 Omri 208008649\\Ex02_UI\\Program.cs",
+              "RelativeToolTip": "Ex02_UI\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T17:26:12.711Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "GameInterface.cs",
-              "DocumentMoniker": "C:\\Users\\Omri\\Desktop\\degree\\last year\\C#\\HW2\\Ex02 LihiCohen 314958042 OmriLevy 208008649\\Ex02 Lihi 314958042 Omri 208008649\\Ex02_UI\\GameInterface.cs",
+              "DocumentMoniker": "C:\\Users\\Omri\\Desktop\\degree\\last year\\C#\\HW2\\clone 5.12\\WordleGame\\Ex02 Lihi 314958042 Omri 208008649\\Ex02_UI\\GameInterface.cs",
               "RelativeDocumentMoniker": "Ex02_UI\\GameInterface.cs",
-              "ToolTip": "C:\\Users\\Omri\\Desktop\\degree\\last year\\C#\\HW2\\Ex02 LihiCohen 314958042 OmriLevy 208008649\\Ex02 Lihi 314958042 Omri 208008649\\Ex02_UI\\GameInterface.cs",
+              "ToolTip": "C:\\Users\\Omri\\Desktop\\degree\\last year\\C#\\HW2\\clone 5.12\\WordleGame\\Ex02 Lihi 314958042 Omri 208008649\\Ex02_UI\\GameInterface.cs",
               "RelativeToolTip": "Ex02_UI\\GameInterface.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAASwDQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-11T16:27:43.572Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BoardLogic.cs",
-              "DocumentMoniker": "C:\\Users\\Omri\\Desktop\\degree\\last year\\C#\\HW2\\Ex02 LihiCohen 314958042 OmriLevy 208008649\\Ex02 Lihi 314958042 Omri 208008649\\Ex02_Logic\\BoardLogic.cs",
-              "RelativeDocumentMoniker": "Ex02_Logic\\BoardLogic.cs",
-              "ToolTip": "C:\\Users\\Omri\\Desktop\\degree\\last year\\C#\\HW2\\Ex02 LihiCohen 314958042 OmriLevy 208008649\\Ex02 Lihi 314958042 Omri 208008649\\Ex02_Logic\\BoardLogic.cs",
-              "RelativeToolTip": "Ex02_Logic\\BoardLogic.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-11T16:19:18.239Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Player.cs",
-              "DocumentMoniker": "C:\\Users\\Omri\\Desktop\\degree\\last year\\C#\\HW2\\Ex02 LihiCohen 314958042 OmriLevy 208008649\\Ex02 Lihi 314958042 Omri 208008649\\Ex02_Logic\\Player.cs",
-              "RelativeDocumentMoniker": "Ex02_Logic\\Player.cs",
-              "ToolTip": "C:\\Users\\Omri\\Desktop\\degree\\last year\\C#\\HW2\\Ex02 LihiCohen 314958042 OmriLevy 208008649\\Ex02 Lihi 314958042 Omri 208008649\\Ex02_Logic\\Player.cs",
-              "RelativeToolTip": "Ex02_Logic\\Player.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-11T16:17:38.095Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Omri\\Desktop\\degree\\last year\\C#\\HW2\\Ex02 LihiCohen 314958042 OmriLevy 208008649\\Ex02 Lihi 314958042 Omri 208008649\\Ex02_UI\\Program.cs",
-              "RelativeDocumentMoniker": "Ex02_UI\\Program.cs",
-              "ToolTip": "C:\\Users\\Omri\\Desktop\\degree\\last year\\C#\\HW2\\Ex02 LihiCohen 314958042 OmriLevy 208008649\\Ex02 Lihi 314958042 Omri 208008649\\Ex02_UI\\Program.cs",
-              "RelativeToolTip": "Ex02_UI\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-11T16:15:14.259Z",
+              "WhenOpened": "2025-05-12T17:16:43.256Z",
               "EditorCaption": ""
             }
           ]

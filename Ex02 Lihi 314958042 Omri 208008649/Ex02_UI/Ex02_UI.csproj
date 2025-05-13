@@ -36,15 +36,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Board.cs" />
     <Compile Include="GameInterface.cs" />
+    <Compile Include="GameManager.cs" />
     <Compile Include="InputValidation.cs" />
+    <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Ex02_Logic\Ex02_Logic.csproj">
-      <Project>{5bfeff22-163c-462d-a128-14631a5115a0}</Project>
-      <Name>Ex02_Logic</Name>
-    </ProjectReference>
+    <Reference Include="Ex02.ConsoleUtils">
+      <HintPath>.\Ex02.ConsoleUtils.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
