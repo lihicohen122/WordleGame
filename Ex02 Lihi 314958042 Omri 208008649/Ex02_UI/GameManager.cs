@@ -6,14 +6,14 @@ namespace Ex02_UI
   
     public class GameManager
     {
-        //private static bool forNow = true;
         
         private Player m_PPlayer;
 
         private bool m_isGameOver;
 
-        private readonly string r_CurrentWordToGuess;
-        private string m_Result;
+        //private readonly string r_CurrentWordToGuess;
+        public readonly int[] r_CurrentWordToGuess; //CHANGE TO PRIVATE
+        private int[] m_Result;
         private const int k_SizeOfGeneratedWordToGuess = 4;
        
 
@@ -25,7 +25,7 @@ namespace Ex02_UI
             m_Result = null;
         }
 
-        public string GetResult()
+        public int[] GetResult()
         {
             return m_Result;
         }
@@ -34,20 +34,33 @@ namespace Ex02_UI
         {
             return m_PPlayer.MTotalGuessesChosen;
         }
-        private string randomizeWord() //static
-        {
-            char[] iPossibleLetters = {'A', 'B', 'C', 'D', 'E','F','G','H'};
-            Random rand = new Random();
-            string randomizedResult="";
-            int remainingLettersToRandomize = 8;
 
-            for(int i = 0; i < k_SizeOfGeneratedWordToGuess; i++)
+        public int GetUserCurrentGuessCount()
+        {
+            return m_PPlayer.MCurrentGuessNumber;
+        }
+
+        private int[] randomizeWord() //static
+        {
+            
+            //Random rand = new Random();
+            //string randomizedResult="";
+            //int remainingLettersToRandomize = 8;
+            Random rand = new Random();
+            int[] randomizedResult = new int[k_SizeOfGeneratedWordToGuess];
+            int remainingLettersToRandomize = 8; 
+            int[] iPossibleNumbers = { 0,1,2,3,4,5,6,7 }; //Representing {A,B,C,D,E,F,G,H}
+
+            for (int i = 0; i < k_SizeOfGeneratedWordToGuess; i++)
             {
                 int randomizedIndex = rand.Next(remainingLettersToRandomize);
-                randomizedResult += iPossibleLetters[randomizedIndex];
+                //randomizedResult[i] = randomizedIndex;
 
-                (iPossibleLetters[randomizedIndex], iPossibleLetters[remainingLettersToRandomize - 1]) =
-                    (iPossibleLetters[remainingLettersToRandomize - 1], iPossibleLetters[randomizedIndex]);
+                randomizedResult[i] = iPossibleNumbers[randomizedIndex];
+
+                //swap possible numbers to prevent repetition
+                iPossibleNumbers[randomizedIndex] = iPossibleNumbers[remainingLettersToRandomize - 1];
+
 
                 remainingLettersToRandomize--;
             }
@@ -55,31 +68,34 @@ namespace Ex02_UI
             return randomizedResult;
         }
 
-        public void ProcessGuess(string input)
+        public void ProcessGuess(int[] i_Input)
         {
-            m_PPlayer.MCurrentGuess=input;
+            //SHOULD ALREADY BE TRANSLATED
+            m_PPlayer.MCurrentGuess = i_Input;
+            m_PPlayer.raisePlayerGuessCounter();
 
             m_Result = checkPlayerGuess();
 
             m_isGameOver = IsGameOverChecker();
         }
 
-        private string checkPlayerGuess()
+        private int[] checkPlayerGuess()
         {
-            string currentPlayerGuess = m_PPlayer.MCurrentGuess;
-            int V_counter = 0;
-            int X_counter = 0;
+            int[] currentPlayerGuess = m_PPlayer.MCurrentGuess;
+            int exactMatchesCounterV = 0;
+            int misplacedMatchesCounterX = 0;
 
-            bool[] randomizedWordMatched = new bool[k_SizeOfGeneratedWordToGuess]; // Change to - letterMatch
-            bool[] playerGuessMatched = new bool[k_SizeOfGeneratedWordToGuess]; //Change to - exactPositionMatch
+
+            bool[] randomizedWordMatched = new bool[k_SizeOfGeneratedWordToGuess]; 
+            bool[] playerGuessMatched = new bool[k_SizeOfGeneratedWordToGuess]; 
 
             for(int i = 0; i < k_SizeOfGeneratedWordToGuess; i++)
             {
                 if(currentPlayerGuess[i] == r_CurrentWordToGuess[i])
                 {
-                    V_counter++;
-                    randomizedWordMatched[i] = true;
-                    playerGuessMatched[i] = true;
+                    exactMatchesCounterV++;
+                    randomizedWordMatched[i] = true; //Mark the word position as matched to prevent recounting.
+                    playerGuessMatched[i] = true; //Mark the guess position as matched.
                 }
             }
 
@@ -95,21 +111,20 @@ namespace Ex02_UI
 
                     if(currentPlayerGuess[j] == r_CurrentWordToGuess[k])
                     {
-                        X_counter++;
+                        misplacedMatchesCounterX++;
                         randomizedWordMatched[k]=true;
                         break;
                     }
                 }
             }
 
-            string resultAfterCheck = buildResponseAfterCheck(V_counter, X_counter);
+            int[] resultAfterCheck = new int[2];
+            resultAfterCheck[0] = exactMatchesCounterV;
+            resultAfterCheck[1] = misplacedMatchesCounterX;
+            
+
 
             return resultAfterCheck;
-        }
-        private static string buildResponseAfterCheck(int V_counter, int X_counter)
-        {
-            string response = new string('V', V_counter) + new string('X', X_counter);
-            return response;
         }
 
         public bool IsGameOverChecker()
@@ -131,20 +146,20 @@ namespace Ex02_UI
 
         private bool isGuessMatch()
         {
-            //might want to change both returns to use a flag.
-            //then we would have a single return.
+            bool isGuessMatch = false;
 
-            bool isGuessMatch = m_Result != null;
-
-
-            for (int i = 0; i < k_SizeOfGeneratedWordToGuess; i++)
+            if(m_Result!=null && m_Result[0] == 4)
             {
-                if(m_Result!=null && m_Result[i] != 'V')
-                {
-                    isGuessMatch = false;
-                    break;
-                }
+                isGuessMatch=true;
             }
+            //for (int i = 0; i < k_SizeOfGeneratedWordToGuess; i++)
+            //{
+            //    if(m_Result!=null && m_Result[i] != 'V')
+            //    {
+            //        isGuessMatch = false;
+            //        break;
+            //    }
+            //}
 
             return isGuessMatch;
         }
@@ -160,7 +175,20 @@ namespace Ex02_UI
             return m_PPlayer.MisWinner;
         }
 
+        private static int[] mapUserInputToLogicParameters(string input)
+        {
+            int[] parameters = new int[4];
 
+            for (int i = 0; i < input.Length; i++)
+            {
+                char currentChar = input[i];
+                parameters[i] = currentChar - 'A';
+            }
+
+            return parameters;
+        }
+
+       
 
 
     }

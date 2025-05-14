@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Ex02_UI
@@ -8,7 +9,7 @@ namespace Ex02_UI
     {
 
         private GameManager m_GameManager;
-
+        private UItoLogicMapper uiEncoder;
         private Board m_Board;
         private readonly InputValidation r_Input = new InputValidation();
 
@@ -43,6 +44,7 @@ namespace Ex02_UI
         {
             InputValidation.InitPackage initPackage = r_Input.GetInitPackage();
             m_GameManager = new GameManager(initPackage.UserChosenGuessCount); //TODO: Initialize GameManager with user-chosen guess count
+            uiEncoder = new UItoLogicMapper(m_GameManager);
             m_Board = new Board();
 
             runGameLoop();
@@ -63,11 +65,15 @@ namespace Ex02_UI
                 //DisplayCurrentBoard(); // Display current board
                 m_Board.ClearScreen();
                 Console.WriteLine(m_Board.BuildBoardSnapshot(m_GameManager.getUserChosenNumberOfGuesses()+1));
+                Console.WriteLine(uiEncoder.MapLogicParametersToUi(m_GameManager.r_CurrentWordToGuess));
 
                 string userGuess = r_Input.GetUserGuess(); // Validated guess or quit
-                m_GameManager.ProcessGuess(userGuess); // Process the user's guess in GameManager
+               // m_GameManager.ProcessGuess(userGuess); // Process the user's guess in GameManager
+                m_GameManager.ProcessGuess(uiEncoder.MapUserInputToLogicParameters(userGuess));
                 m_Board.s_guesses.Add(userGuess);
-                m_Board.s_results.Add(m_GameManager.GetResult());
+               
+                m_Board.s_results.Add(uiEncoder.TranslateResultToUi(m_GameManager.GetResult()));
+                //RESULT IS INT[2] WHILE GUESS REMAINS STRING   
                 
             }
         }
@@ -81,12 +87,18 @@ namespace Ex02_UI
 
             if (m_GameManager.IsWinner())
             {
-                Console.WriteLine("GREAT SUCCESS! You Guessed after X steps!" ); //we need X from game manager or somewhere else in the logic. 
+                int stepsTaken = m_GameManager.GetUserCurrentGuessCount();
+
+                // Use string.Format to construct the message
+                Console.WriteLine(string.Format("GREAT SUCCESS! You Guessed after {0} steps!", stepsTaken));
             }
             else
             {
-                Console.WriteLine("you lost! no more guesses allowed");
-                Console.WriteLine($"The correct code was: XXXX"); //get the correct code from GameManager
+                string correctCode = uiEncoder.MapLogicParametersToUi(m_GameManager.r_CurrentWordToGuess);
+
+                // Use string.Format to construct the message
+                Console.WriteLine("You lost! No more guesses allowed");
+                Console.WriteLine(string.Format("The correct code was: {0}", correctCode));
             }
         }
 

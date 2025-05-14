@@ -9,7 +9,7 @@ namespace Ex02_UI
     internal class Player
     {
         public int MCurrentGuessNumber { get; internal set;}
-        public string MCurrentGuess { get; internal set; }
+        public int[] MCurrentGuess { get; internal set; }
         public int MTotalGuessesChosen { get; set; }
 
         public bool MisWinner { get; set; }
@@ -20,6 +20,12 @@ namespace Ex02_UI
             MCurrentGuessNumber = 0;
             MCurrentGuess = null;
             MisWinner = false;
+        }
+
+
+        public void raisePlayerGuessCounter()
+        {
+            MCurrentGuessNumber++;
         }
     }
 }
