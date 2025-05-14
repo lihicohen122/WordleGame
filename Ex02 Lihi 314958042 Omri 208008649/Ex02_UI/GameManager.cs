@@ -148,18 +148,12 @@ namespace Ex02_UI
         {
             bool isGuessMatch = false;
 
-            if(m_Result!=null && m_Result[0] == 4)
-            {
-                isGuessMatch=true;
-            }
-            //for (int i = 0; i < k_SizeOfGeneratedWordToGuess; i++)
-            //{
-            //    if(m_Result!=null && m_Result[i] != 'V')
-            //    {
-            //        isGuessMatch = false;
-            //        break;
-            //    }
+            //if(m_Result!=null && m_Result[0] == 4)
+            // {
+            //  isGuessMatch=true;
             //}
+            isGuessMatch = m_Result != null && m_Result[0] == 4;
+
 
             return isGuessMatch;
         }
@@ -174,22 +168,6 @@ namespace Ex02_UI
         {
             return m_PPlayer.MisWinner;
         }
-
-        private static int[] mapUserInputToLogicParameters(string input)
-        {
-            int[] parameters = new int[4];
-
-            for (int i = 0; i < input.Length; i++)
-            {
-                char currentChar = input[i];
-                parameters[i] = currentChar - 'A';
-            }
-
-            return parameters;
-        }
-
-       
-
 
     }
 }
