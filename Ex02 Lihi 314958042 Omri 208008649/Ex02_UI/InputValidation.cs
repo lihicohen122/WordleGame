@@ -45,13 +45,14 @@ namespace Ex02_UI
 
         internal string GetUserGuess()
         {
-            Console.Write("Please type your guess or 'Q' to quit: ");
+            Console.WriteLine("Please type your guess (4 letter string using A–H. All letters must be unique and no spaces)");
+            Console.Write("or 'Q' to quit: ");
             string userGuess = Console.ReadLine();
             checkToQuit(userGuess); 
 
             while (!isValidGuess(userGuess))
             {
-                Console.Write("Invalid guess. Please enter 4 letter string using A–H (all letters must be unique): ");
+                Console.Write("Invalid guess. Please enter 4 letter string using A–H (all letters must be unique and no spaces): ");
                 userGuess = Console.ReadLine();
                 checkToQuit(userGuess);
             }
