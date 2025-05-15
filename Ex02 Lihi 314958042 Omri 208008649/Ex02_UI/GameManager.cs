@@ -78,8 +78,8 @@ namespace Ex02_UI
                 if(currentPlayerGuess[i] == r_CurrentWordToGuess[i])
                 {
                     exactMatchesCounterV++;
-                    randomizedWordMatched[i] = true; //Mark the word position as matched to prevent recounting.
-                    playerGuessMatched[i] = true; //Mark the guess position as matched.
+                    randomizedWordMatched[i] = true; 
+                    playerGuessMatched[i] = true; 
                 }
             }
 
