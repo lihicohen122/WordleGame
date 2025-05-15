@@ -113,7 +113,7 @@ namespace Ex02_UI
                 }
             }
 
-            return uniqueLetters; // All letters are unique
+            return uniqueLetters;
         }
 
 
