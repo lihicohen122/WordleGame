@@ -43,7 +43,7 @@ namespace Ex02_UI
             return i_NumOfGuesses <= 10 && i_NumOfGuesses >= 4;
         }
 
-        internal string GetUserGuess() //we will use this for each round
+        internal string GetUserGuess()
         {
             Console.Write("Please type your guess or 'Q' to quit: ");
             string userGuess = Console.ReadLine();
