@@ -70,6 +70,7 @@ namespace Ex02_UI
 
         private static void quitGame()
         {
+            Console.WriteLine("GOODBYE! CHAO! ADIOS!");
             Environment.Exit(0);
         }
 
