@@ -1,5 +1,4 @@
 C:\Users\רויטל כהן\Desktop\שנה ג\c# homework\WordleGame\Ex02 Lihi 314958042 Omri 208008649\Ex02_UI\obj\Debug\Ex02_UI.csproj.AssemblyReference.cache
-C:\Users\רויטל כהן\Desktop\שנה ג\c# homework\WordleGame\Ex02 Lihi 314958042 Omri 208008649\Ex02_UI\obj\Debug\Ex02_UI.csproj.SuggestedBindingRedirects.cache
 C:\Users\רויטל כהן\Desktop\שנה ג\c# homework\WordleGame\Ex02 Lihi 314958042 Omri 208008649\Ex02_UI\obj\Debug\Ex02_UI.csproj.CoreCompileInputs.cache
 C:\Users\Omri\Desktop\degree\last year\C#\HW2\clone 5.12\WordleGame\Ex02 Lihi 314958042 Omri 208008649\Ex02_UI\obj\Debug\Ex02_UI.csproj.AssemblyReference.cache
 C:\Users\Omri\Desktop\degree\last year\C#\HW2\clone 5.12\WordleGame\Ex02 Lihi 314958042 Omri 208008649\Ex02_UI\obj\Debug\Ex02_UI.csproj.CoreCompileInputs.cache
@@ -10,3 +9,10 @@ C:\Users\Omri\Desktop\degree\last year\C#\HW2\clone 5.12\WordleGame\Ex02 Lihi 31
 C:\Users\Omri\Desktop\degree\last year\C#\HW2\clone 5.12\WordleGame\Ex02 Lihi 314958042 Omri 208008649\Ex02_UI\obj\Debug\Ex02_UI.csproj.Up2Date
 C:\Users\Omri\Desktop\degree\last year\C#\HW2\clone 5.12\WordleGame\Ex02 Lihi 314958042 Omri 208008649\Ex02_UI\obj\Debug\Ex02_UI.exe
 C:\Users\Omri\Desktop\degree\last year\C#\HW2\clone 5.12\WordleGame\Ex02 Lihi 314958042 Omri 208008649\Ex02_UI\obj\Debug\Ex02_UI.pdb
+C:\Users\רויטל כהן\Desktop\שנה ג\c# homework\WordleGame\Ex02 Lihi 314958042 Omri 208008649\Ex02_UI\bin\Debug\Ex02_UI.exe.config
+C:\Users\רויטל כהן\Desktop\שנה ג\c# homework\WordleGame\Ex02 Lihi 314958042 Omri 208008649\Ex02_UI\bin\Debug\Ex02_UI.exe
+C:\Users\רויטל כהן\Desktop\שנה ג\c# homework\WordleGame\Ex02 Lihi 314958042 Omri 208008649\Ex02_UI\bin\Debug\Ex02_UI.pdb
+C:\Users\רויטל כהן\Desktop\שנה ג\c# homework\WordleGame\Ex02 Lihi 314958042 Omri 208008649\Ex02_UI\bin\Debug\Ex02.ConsoleUtils.dll
+C:\Users\רויטל כהן\Desktop\שנה ג\c# homework\WordleGame\Ex02 Lihi 314958042 Omri 208008649\Ex02_UI\obj\Debug\Ex02_UI.csproj.CopyComplete
+C:\Users\רויטל כהן\Desktop\שנה ג\c# homework\WordleGame\Ex02 Lihi 314958042 Omri 208008649\Ex02_UI\obj\Debug\Ex02_UI.exe
+C:\Users\רויטל כהן\Desktop\שנה ג\c# homework\WordleGame\Ex02 Lihi 314958042 Omri 208008649\Ex02_UI\obj\Debug\Ex02_UI.pdb

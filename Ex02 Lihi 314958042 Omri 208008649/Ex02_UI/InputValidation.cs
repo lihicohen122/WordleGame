@@ -12,14 +12,12 @@ namespace Ex02_UI
 
         internal class InitPackage
         {
-            private readonly int r_UserChosenGuessCount;
+            internal int UserChosenGuessCount { get; private set; }
 
             internal InitPackage(int i_UserChosenGuessCount)
             {
-                r_UserChosenGuessCount = i_UserChosenGuessCount;
+                UserChosenGuessCount = i_UserChosenGuessCount;
             }
-
-            internal int UserChosenGuessCount => r_UserChosenGuessCount;
         }
 
         private static int getUserNumOfGuesses()
@@ -70,7 +68,6 @@ namespace Ex02_UI
 
         private static void quitGame()
         {
-            Console.WriteLine("\nGoodbye!");
             Environment.Exit(0);
         }
 

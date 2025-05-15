@@ -7,11 +7,10 @@ namespace Ex02_UI
 {
     internal class GameInterface
     {
-
         private GameManager m_GameManager;
-        private UItoLogicMapper uiEncoder;
+        private UItoLogicMapper m_UiEncoder;
         private Board m_Board;
-        private readonly InputValidation r_Input = new InputValidation();
+        private InputValidation m_Input;
 
         public void RunGame()
         {
@@ -21,7 +20,7 @@ namespace Ex02_UI
 
         private static void printWelcomeMessage()
         {
-            Console.WriteLine("Lets start Playing!");
+            Console.WriteLine("Let's start Playing!");
         }
 
         private void startGameSession()
@@ -42,9 +41,10 @@ namespace Ex02_UI
 
         private void startRound()
         {
-            InputValidation.InitPackage initPackage = r_Input.GetInitPackage();
-            m_GameManager = new GameManager(initPackage.UserChosenGuessCount); //TODO: Initialize GameManager with user-chosen guess count
-            uiEncoder = new UItoLogicMapper(m_GameManager);
+            m_Input = new InputValidation();
+            InputValidation.InitPackage initPackage = m_Input.GetInitPackage();
+            m_GameManager = new GameManager(initPackage.UserChosenGuessCount);
+            m_UiEncoder = new UItoLogicMapper(m_GameManager);
             m_Board = new Board();
 
             runGameLoop();
@@ -53,63 +53,116 @@ namespace Ex02_UI
 
         private bool isPlayingAgain()
         {
-            return r_Input.StartNewGameQuestion();
+            return m_Input.StartNewGameQuestion();
         }
 
         private void runGameLoop()
         {
-            // Game loop will continue until the game is over
-            while (!m_GameManager.IsGameOverChecker()) // Use m_GameManager here
+            while (!m_GameManager.IsGameOverChecker())
             {
-                //ClearScreen();
-                //DisplayCurrentBoard(); // Display current board
-                m_Board.ClearScreen();
-                Console.WriteLine(m_Board.BuildBoardSnapshot(m_GameManager.getUserChosenNumberOfGuesses()+1));
-                Console.WriteLine(uiEncoder.MapLogicParametersToUi(m_GameManager.r_CurrentWordToGuess));
+                clearScreen();
+                displayBoard(m_Board, m_GameManager.getUserChosenNumberOfGuesses() + 1);
+                string userGuess = m_Input.GetUserGuess();
+                List<int> guessAsList = m_UiEncoder.MapUserInputToLogicParameters(userGuess).ToList();
 
-                string userGuess = r_Input.GetUserGuess(); // Validated guess or quit
-               // m_GameManager.ProcessGuess(userGuess); // Process the user's guess in GameManager
-                m_GameManager.ProcessGuess(uiEncoder.MapUserInputToLogicParameters(userGuess));
-                m_Board.s_guesses.Add(userGuess);
-               
-                m_Board.s_results.Add(uiEncoder.TranslateResultToUi(m_GameManager.GetResult()));
-                //RESULT IS INT[2] WHILE GUESS REMAINS STRING   
-                
+                m_GameManager.ProcessGuess(guessAsList.ToArray());
+                m_Board.AddGuess(guessAsList);
+                int[] result = m_GameManager.GetResult();
+
+                m_Board.AddResult(result[0], result[1]);
             }
         }
 
         private void printGameResult()
         {
-            //ClearScreen(); //from consoleUtils 
-            //PrintBoard(); // Final state of the board
-            m_Board.ClearScreen();
-            m_Board.BuildBoardSnapshot(m_GameManager.getUserChosenNumberOfGuesses()+1);
+            clearScreen();
+            displayBoard(m_Board, m_GameManager.getUserChosenNumberOfGuesses() + 1);
 
             if (m_GameManager.IsWinner())
             {
                 int stepsTaken = m_GameManager.GetUserCurrentGuessCount();
-
-                // Use string.Format to construct the message
-                Console.WriteLine(string.Format("GREAT SUCCESS! You Guessed after {0} steps!", stepsTaken));
+                Console.WriteLine("GREAT SUCCESS! You Guessed after {0} steps!", stepsTaken);
             }
             else
             {
-                string correctCode = uiEncoder.MapLogicParametersToUi(m_GameManager.r_CurrentWordToGuess);
-
-                // Use string.Format to construct the message
+                string correctCode = m_UiEncoder.MapLogicParametersToUi(m_GameManager.GetCurrentWordToGuess());
                 Console.WriteLine("You lost! No more guesses allowed");
-                Console.WriteLine(string.Format("The correct code was: {0}", correctCode));
+                Console.WriteLine("The correct code was: {0}", correctCode);
             }
+
         }
 
-        //we also need to write V and X per guess. we need to think about this together because it's highly related to the logic. 
+        private static void displayBoard(Board i_Board, int i_MaxRows)
+        {
+            StringBuilder sb = new StringBuilder();
 
-        
+            sb.Append("Current board status:");
+            sb.Append(Environment.NewLine);
+            sb.Append(Environment.NewLine);
+            sb.AppendLine("| Pins:      | Result:   |");
+            sb.AppendLine("|============|===========|");
+            sb.AppendLine(string.Format("| {0,-11}| {1,-10}|", "# # # #", string.Empty));
+            sb.AppendLine("|============|===========|");
 
+            for (int i = 0; i < i_MaxRows - 1; i++)
+            {
+                string guessStr = string.Empty;
+                string resultStr = string.Empty;
 
+                if (i < i_Board.Guesses.Count)
+                {
+                    guessStr = formatGuess(i_Board.Guesses[i]);
+                }
+
+                if (i < i_Board.Results.Count)
+                {
+                    resultStr = formatResult(i_Board.Results[i]);
+                }
+
+                sb.AppendLine(string.Format("| {0,-11}| {1,-10}|", guessStr, resultStr));
+                sb.AppendLine("|============|===========|");
+            }
+
+            Console.WriteLine(sb.ToString());
+        }
+
+        private static string formatGuess(List<int> i_UserGuessAsList)
+        {
+            string result;
+
+            if (i_UserGuessAsList == null || i_UserGuessAsList.Count == 0 || i_UserGuessAsList[0] == -1)
+            {
+                result = "# # # #";
+            }
+            else
+            {
+                List<string> letters = i_UserGuessAsList.ConvertAll(i_Num => ((char)('A' + i_Num)).ToString());
+                result = string.Join(" ", letters);
+            }
+
+            return result;
+        }
+
+        private static string formatResult(Result i_Result)
+        {
+            string result = string.Empty;
+
+            if (i_Result.ExactGuess != 0 || i_Result.MisplacedGuess != 0)
+            {
+                StringBuilder sb = new StringBuilder(i_Result.ExactGuess + i_Result.MisplacedGuess);
+
+                sb.Append('V', i_Result.ExactGuess);
+                sb.Append('X', i_Result.MisplacedGuess);
+
+                result = sb.ToString();
+            }
+
+            return result;
+        }
+
+        private static void clearScreen()
+        {
+            Console.Clear();
+        }
     }
-
-
-
-    
 }

@@ -1,43 +1,22 @@
 ﻿using System.Collections.Generic;
-using System.Text;
 
 namespace Ex02_UI
 {
     internal class Board
     {
-        internal List<string> s_guesses = new List<string>();
-        internal List<string> s_results = new List<string>();
+        private readonly List<List<int>> r_UserGuesses = new List<List<int>>();
+        private readonly List<Result> r_Results = new List<Result>();
+        internal IReadOnlyList<List<int>> Guesses => r_UserGuesses;
+        internal IReadOnlyList<Result> Results => r_Results;
 
-        internal Board()
+        internal void AddGuess(List<int> i_UserGuess)
         {
-            s_guesses.Add("# # # #");
-            s_results.Add("");
+            r_UserGuesses.Add(i_UserGuess);
         }
 
-        internal string BuildBoardSnapshot(int i_UserChosenGuesses)
+        internal void AddResult(int i_ExactGuess, int i_MisplacedGuess)
         {
-            StringBuilder board = new StringBuilder();
-            board.AppendLine("Current board status:\n");
-
-            // Header
-            board.AppendLine("| Pins:      | Result:   |");
-            board.AppendLine("|============|===========|");
-
-            for(int i = 0; i < i_UserChosenGuesses; i++) //HARD CODED
-            {
-                string pinLine = i < s_guesses.Count ? s_guesses[i] : "";
-                string resultLine = i < s_results.Count ? s_results[i] : "";
-
-                board.AppendLine(string.Format("| {0,-11}| {1,-10}|", pinLine, resultLine));
-                board.AppendLine("|============|===========|");
-            }
-            
-            return board.ToString();
-        }
-
-        internal void ClearScreen()
-        {
-            Ex02.ConsoleUtils.Screen.Clear();
+            r_Results.Add(new Result(i_ExactGuess, i_MisplacedGuess));
         }
     }
 }

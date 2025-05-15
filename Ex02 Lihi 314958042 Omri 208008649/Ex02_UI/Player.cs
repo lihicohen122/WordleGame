@@ -1,31 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Ex02_UI
+﻿namespace Ex02_UI
 {
     internal class Player
     {
-        public int MCurrentGuessNumber { get; internal set;}
-        public int[] MCurrentGuess { get; internal set; }
-        public int MTotalGuessesChosen { get; set; }
+        internal int CurrentGuessNumber { get; private set; }
+        internal int[] CurrentGuess { get; set; }
+        internal int TotalGuessesChosen { get; set; }
+        internal bool IsWinner { get; set; }
 
-        public bool MisWinner { get; set; }
-
-        public Player(int i_NumGuessesChosen)
+        internal Player (int i_NumGuessesChosen)
         {
-            MTotalGuessesChosen = i_NumGuessesChosen;
-            MCurrentGuessNumber = 0;
-            MCurrentGuess = null;
-            MisWinner = false;
+            TotalGuessesChosen = i_NumGuessesChosen;
+            CurrentGuessNumber = 0;
+            CurrentGuess = null;
+            IsWinner = false;
         }
 
-
-        public void raisePlayerGuessCounter()
+        internal void raisePlayerGuessCounter()
         {
-            MCurrentGuessNumber++;
+            CurrentGuessNumber++;
         }
     }
 }

@@ -1,28 +1,26 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Ex02_UI
 {
-  
     public class GameManager
     {
-        
-        private Player m_PPlayer;
-
-        private bool m_isGameOver;
-
-        //private readonly string r_CurrentWordToGuess;
-        public readonly int[] r_CurrentWordToGuess; //CHANGE TO PRIVATE
+        private readonly Player r_PPlayer;
+        private bool m_IsGameOver;
+        private readonly int[] r_CurrentWordToGuess; 
         private int[] m_Result;
         private const int k_SizeOfGeneratedWordToGuess = 4;
-       
-
-        public GameManager(int i_UserChosenGuessCount)
+        
+        public GameManager (int i_UserChosenGuessCount)
         {
-            m_PPlayer = new Player(i_UserChosenGuessCount);
+            r_PPlayer = new Player(i_UserChosenGuessCount);
             r_CurrentWordToGuess = randomizeWord();
-            m_isGameOver = false;
+            m_IsGameOver = false;
             m_Result = null;
+        }
+
+        public int[] GetCurrentWordToGuess()
+        {
+            return r_CurrentWordToGuess;
         }
 
         public int[] GetResult()
@@ -32,20 +30,16 @@ namespace Ex02_UI
 
         public int getUserChosenNumberOfGuesses()
         {
-            return m_PPlayer.MTotalGuessesChosen;
+            return r_PPlayer.TotalGuessesChosen;
         }
 
         public int GetUserCurrentGuessCount()
         {
-            return m_PPlayer.MCurrentGuessNumber;
+            return r_PPlayer.CurrentGuessNumber;
         }
 
-        private int[] randomizeWord() //static
+        private int[] randomizeWord() 
         {
-            
-            //Random rand = new Random();
-            //string randomizedResult="";
-            //int remainingLettersToRandomize = 8;
             Random rand = new Random();
             int[] randomizedResult = new int[k_SizeOfGeneratedWordToGuess];
             int remainingLettersToRandomize = 8; 
@@ -54,14 +48,9 @@ namespace Ex02_UI
             for (int i = 0; i < k_SizeOfGeneratedWordToGuess; i++)
             {
                 int randomizedIndex = rand.Next(remainingLettersToRandomize);
-                //randomizedResult[i] = randomizedIndex;
 
                 randomizedResult[i] = iPossibleNumbers[randomizedIndex];
-
-                //swap possible numbers to prevent repetition
                 iPossibleNumbers[randomizedIndex] = iPossibleNumbers[remainingLettersToRandomize - 1];
-
-
                 remainingLettersToRandomize--;
             }
 
@@ -70,26 +59,21 @@ namespace Ex02_UI
 
         public void ProcessGuess(int[] i_Input)
         {
-            //SHOULD ALREADY BE TRANSLATED
-            m_PPlayer.MCurrentGuess = i_Input;
-            m_PPlayer.raisePlayerGuessCounter();
-
+            r_PPlayer.CurrentGuess = i_Input;
+            r_PPlayer.raisePlayerGuessCounter();
             m_Result = checkPlayerGuess();
-
-            m_isGameOver = IsGameOverChecker();
+            m_IsGameOver = IsGameOverChecker();
         }
 
         private int[] checkPlayerGuess()
         {
-            int[] currentPlayerGuess = m_PPlayer.MCurrentGuess;
+            int[] currentPlayerGuess = r_PPlayer.CurrentGuess;
             int exactMatchesCounterV = 0;
             int misplacedMatchesCounterX = 0;
-
-
             bool[] randomizedWordMatched = new bool[k_SizeOfGeneratedWordToGuess]; 
             bool[] playerGuessMatched = new bool[k_SizeOfGeneratedWordToGuess]; 
 
-            for(int i = 0; i < k_SizeOfGeneratedWordToGuess; i++)
+            for (int i = 0; i < k_SizeOfGeneratedWordToGuess; i++)
             {
                 if(currentPlayerGuess[i] == r_CurrentWordToGuess[i])
                 {
@@ -99,17 +83,17 @@ namespace Ex02_UI
                 }
             }
 
-            for(int j = 0; j < k_SizeOfGeneratedWordToGuess; j++)
+            for (int j = 0; j < k_SizeOfGeneratedWordToGuess; j++)
             {
-                if(playerGuessMatched[j])
+                if (playerGuessMatched[j])
                     continue;
 
-                for(int k = 0; k < k_SizeOfGeneratedWordToGuess; k++)
+                for (int k = 0; k < k_SizeOfGeneratedWordToGuess; k++)
                 {
                     if (randomizedWordMatched[k])
                         continue;
 
-                    if(currentPlayerGuess[j] == r_CurrentWordToGuess[k])
+                    if (currentPlayerGuess[j] == r_CurrentWordToGuess[k])
                     {
                         misplacedMatchesCounterX++;
                         randomizedWordMatched[k]=true;
@@ -122,38 +106,29 @@ namespace Ex02_UI
             resultAfterCheck[0] = exactMatchesCounterV;
             resultAfterCheck[1] = misplacedMatchesCounterX;
             
-
-
             return resultAfterCheck;
         }
 
         public bool IsGameOverChecker()
         {
-            if(!isRemainingGuesses())
+            if (!isRemainingGuesses())
             {
-                m_isGameOver=true;
-                m_PPlayer.MisWinner = false;
+                m_IsGameOver = true;
+                r_PPlayer.IsWinner = false;
             }
 
-            if(isGuessMatch())
+            if (isGuessMatch())
             {
-                m_isGameOver = true;
-                m_PPlayer.MisWinner = true;
+                m_IsGameOver = true;
+                r_PPlayer.IsWinner = true;
             }
 
-            return m_isGameOver;
+            return m_IsGameOver;
         }
 
         private bool isGuessMatch()
         {
-            bool isGuessMatch = false;
-
-            //if(m_Result!=null && m_Result[0] == 4)
-            // {
-            //  isGuessMatch=true;
-            //}
-            isGuessMatch = m_Result != null && m_Result[0] == 4;
-
+            bool isGuessMatch = m_Result != null && m_Result[0] == 4;
 
             return isGuessMatch;
         }
@@ -161,12 +136,12 @@ namespace Ex02_UI
 
         private bool isRemainingGuesses()
         {
-            return m_PPlayer.MCurrentGuessNumber < m_PPlayer.MTotalGuessesChosen;
+            return r_PPlayer.CurrentGuessNumber < r_PPlayer.TotalGuessesChosen;
         }
 
         public bool IsWinner()
         {
-            return m_PPlayer.MisWinner;
+            return r_PPlayer.IsWinner;
         }
 
     }
