@@ -51,8 +51,9 @@ namespace Ex02_UI
 
             while (!isValidGuess(userGuess))
             {
-                Console.Write("Invalid guess. Please enter 4 letter string using A–H: ");
+                Console.Write("Invalid guess. Please enter 4 letter string using A–H (all letters must be unique): ");
                 userGuess = Console.ReadLine();
+                checkToQuit(userGuess);
             }
 
             return userGuess;
@@ -73,7 +74,7 @@ namespace Ex02_UI
 
         private static bool isValidGuess(string i_UserGuess)
         {
-            return isValidGuessLength(i_UserGuess) && isValidGuessCharacters(i_UserGuess);
+            return isValidGuessLength(i_UserGuess) && isValidGuessCharacters(i_UserGuess)&& areAllLettersUnique(i_UserGuess);
         }
 
         private static bool isValidGuessLength(string i_UserGuess)
@@ -96,6 +97,25 @@ namespace Ex02_UI
 
             return isValidCharacters;
         }
+
+        private static bool areAllLettersUnique(string i_UserGuess)
+        {
+            bool uniqueLetters = true; 
+            for (int i = 0; i < i_UserGuess.Length; i++)
+            {
+                for (int j = i + 1; j < i_UserGuess.Length; j++)
+                {
+                    if (i_UserGuess[i] == i_UserGuess[j])
+                    {
+                        uniqueLetters = false;
+                        break; 
+                    }
+                }
+            }
+
+            return uniqueLetters; // All letters are unique
+        }
+
 
         internal bool StartNewGameQuestion()
         {
