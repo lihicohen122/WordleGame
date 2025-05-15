@@ -129,7 +129,7 @@ namespace Ex02_UI
                 yesOrNoInput = Console.ReadLine();
             }
 
-            return yesOrNoInput == "Y"; //if we are here we have "Y" or "N"
+            return yesOrNoInput == "Y"; 
         }
 
         private static bool isValidYesOrNoInput(string i_Input)
