@@ -1,0 +1,9 @@
+C:\Users\Omri\Desktop\setup\Ex02 LihiCohen 314958042 OmriLevy 208008649\Ex02\bin\Debug\Ex02.exe.config
+C:\Users\Omri\Desktop\setup\Ex02 LihiCohen 314958042 OmriLevy 208008649\Ex02\bin\Debug\Ex02.exe
+C:\Users\Omri\Desktop\setup\Ex02 LihiCohen 314958042 OmriLevy 208008649\Ex02\bin\Debug\Ex02.pdb
+C:\Users\Omri\Desktop\setup\Ex02 LihiCohen 314958042 OmriLevy 208008649\Ex02\bin\Debug\Ex02.ConsoleUtils.dll
+C:\Users\Omri\Desktop\setup\Ex02 LihiCohen 314958042 OmriLevy 208008649\Ex02\obj\Debug\Ex02.csproj.AssemblyReference.cache
+C:\Users\Omri\Desktop\setup\Ex02 LihiCohen 314958042 OmriLevy 208008649\Ex02\obj\Debug\Ex02.csproj.CoreCompileInputs.cache
+C:\Users\Omri\Desktop\setup\Ex02 LihiCohen 314958042 OmriLevy 208008649\Ex02\obj\Debug\Ex02.csproj.Up2Date
+C:\Users\Omri\Desktop\setup\Ex02 LihiCohen 314958042 OmriLevy 208008649\Ex02\obj\Debug\Ex02.exe
+C:\Users\Omri\Desktop\setup\Ex02 LihiCohen 314958042 OmriLevy 208008649\Ex02\obj\Debug\Ex02.pdb
