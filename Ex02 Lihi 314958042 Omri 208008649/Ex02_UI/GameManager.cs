@@ -28,7 +28,7 @@ namespace Ex02_UI
             return m_Result;
         }
 
-        public int getUserChosenNumberOfGuesses()
+        public int GetUserChosenNumberOfGuesses()
         {
             return r_PPlayer.TotalGuessesChosen;
         }
@@ -60,7 +60,7 @@ namespace Ex02_UI
         public void ProcessGuess(int[] i_Input)
         {
             r_PPlayer.CurrentGuess = i_Input;
-            r_PPlayer.raisePlayerGuessCounter();
+            r_PPlayer.RaisePlayerGuessCounter();
             m_Result = checkPlayerGuess();
             m_IsGameOver = IsGameOverChecker();
         }

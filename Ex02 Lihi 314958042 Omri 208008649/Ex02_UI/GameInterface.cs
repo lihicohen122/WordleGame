@@ -61,7 +61,7 @@ namespace Ex02_UI
             while (!m_GameManager.IsGameOverChecker())
             {
                 clearScreen();
-                displayBoard(m_Board, m_GameManager.getUserChosenNumberOfGuesses() + 1);
+                displayBoard(m_Board, m_GameManager.GetUserChosenNumberOfGuesses() + 1);
                 string userGuess = m_Input.GetUserGuess();
                 List<int> guessAsList = m_UiEncoder.MapUserInputToLogicParameters(userGuess).ToList();
 
@@ -76,7 +76,7 @@ namespace Ex02_UI
         private void printGameResult()
         {
             clearScreen();
-            displayBoard(m_Board, m_GameManager.getUserChosenNumberOfGuesses() + 1);
+            displayBoard(m_Board, m_GameManager.GetUserChosenNumberOfGuesses() + 1);
 
             if (m_GameManager.IsWinner())
             {

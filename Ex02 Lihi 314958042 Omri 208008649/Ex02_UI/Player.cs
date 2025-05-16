@@ -15,7 +15,7 @@
             IsWinner = false;
         }
 
-        internal void raisePlayerGuessCounter()
+        internal void RaisePlayerGuessCounter()
         {
             CurrentGuessNumber++;
         }
